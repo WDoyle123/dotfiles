@@ -1,0 +1,7 @@
+[user]
+	email = 106931069+WDoyle123@users.noreply.github.com
+	name = WDoyle123
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
