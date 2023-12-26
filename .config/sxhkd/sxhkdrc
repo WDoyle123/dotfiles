@@ -2,7 +2,10 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
+# terminal emulato
+super + enter
+	kitty
+
 super + Return
 	kitty
 
