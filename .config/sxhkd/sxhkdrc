@@ -45,6 +45,18 @@ super + ctrl + m
 super + ctrl + n
     ~/.config/pulse/device-switcher.sh
 
+# Play the next song
+super + ctrl + Right
+    playerctl next
+
+# Play the previous song
+super + ctrl + Left
+    playerctl previous
+
+# Pause Song
+super + ctrl + space
+    playerctl play-pause
+
 #
 # bspwm hotkeys
 #
