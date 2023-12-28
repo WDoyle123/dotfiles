@@ -29,6 +29,22 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# Increase Volume
+super + ctrl + Up
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# Decrease Volume
+super + ctrl + Down
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# Toggle Mute
+super + ctrl + m
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Switch Audio Ouput Device
+super + ctrl + n
+    ~/.config/pulse/device-switcher.sh
+
 #
 # bspwm hotkeys
 #
