@@ -81,6 +81,12 @@ super + y
 super + g
 	bspc node -s biggest.window
 
+super + k
+	~/.config/bspwm/small_window.sh
+
+super + l
+	~/.config/bspwm/large_window.sh
+
 #
 # state/flags
 #
