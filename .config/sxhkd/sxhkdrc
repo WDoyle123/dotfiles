@@ -78,13 +78,13 @@ super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
+#super + g
+#	bspc node -s biggest.window
 
-super + k
+super + ctrl + o
 	~/.config/bspwm/small_window.sh
 
-super + l
+super + ctrl + p
 	~/.config/bspwm/large_window.sh
 
 #
@@ -146,7 +146,7 @@ super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + space
+super + ctrl + return
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop

@@ -152,4 +152,8 @@ update-sink-proplist alsa_output.pci-0000_28_00.4.analog-stereo device.descripti
 .fail
 .endif
 
-
+.ifexists ~/.config/pulse/update_pa.sh
+.nofail
+.system ~/.config/pulse/update_pa.sh
+.fail
+.endif
