@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias steam='flatpak run com.valvesoftware.Steam && exit '
+#alias steam='flatpak run com.valvesoftware.Steam && exit '
 alias steam-link='flatpak run com.valvesoftware.SteamLink'
 alias settings='xfce4-settings-manager'
 alias bashrc='nvim ~/.bashrc'
@@ -17,3 +17,6 @@ alias listen-off='pactl unload-module module-loopback'
 #export PS1="\[\e]2;\u@\H \w\a\e[30;1m\]>\[\e[0m\] "
 
 PS1='\[\e[1;31m\][\[\e[1;33m\]\u\[\e[1;32m\]@\[\e[1;34m\]\h \[\e[1;35m\]\w\[\e[1;31m\]]\[\e[1;00m\]\$\[\e[0;00m\] '
+
+export PATH=/opt/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
