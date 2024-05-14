@@ -22,6 +22,7 @@ return {
         capabilities = capabilities
       })
       lspconfig.bashls.setup({
+        cmd = {"bash-language-server", "start"},
         capabilities = capabilities
       })
       lspconfig.cssls.setup({

@@ -11,6 +11,7 @@ return {
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.yamlfmt,
         null_ls.builtins.formatting.markdownlint,
+        null_ls.builtins.formatting.bashls,
       }
     })
     vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, {})
