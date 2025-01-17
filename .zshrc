@@ -109,8 +109,8 @@ alias szshrc="source ~/.zshrc"
 #                              AUTOCOMPLETION                                 #
 ###############################################################################
 
-autoload -u compinit && compinit
-
+autoload -U compinit
+compinit
 
 ###############################################################################
 #                       EXTERNAL TOOL CONFIGURATIONS                          #
