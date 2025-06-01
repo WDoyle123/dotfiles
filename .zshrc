@@ -53,6 +53,9 @@ export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
 export HISTTIMEFORMAT="[%F %T] "
 
+# Brew
+export HOMEBREW_AUTO_UPDATE_SECS="86400"
+
 setopt inc_append_history
 setopt extended_history
 setopt hist_find_no_dups
@@ -79,6 +82,7 @@ alias sshhome="cd ~/.ssh"
 alias sshconfig="vim ~/.ssh/config"
 alias gitconfig="vim ~/.gitconfig"
 alias ls="gls --color=auto --classify --group-directories-first"
+alias python="python3"
 
 # Git
 alias gits="git status"
@@ -99,7 +103,8 @@ alias kcgx="kubectl config get-contexts"
 alias kcgc="kubectl config get-clusters"
 
 # Server
-alias home-server="ssh will@192.168.0.177"
+alias home-server-local="ssh will@192.168.0.177"
+alias home-server="ssh will@ssh.williamdoyle.co.uk"
 
 # Zshrc
 alias zshrc="nvim ~/.zshrc"
@@ -144,4 +149,3 @@ eval "$(starship init zsh)"
 if [[ -s "$HOME/.config/envman/load.sh" ]]; then
   source "$HOME/.config/envman/load.sh"
 fi
-
