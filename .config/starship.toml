@@ -1,0 +1,14 @@
+add_newline = false
+command_timeout = 1000
+[env_var]
+variable="LOADEDMODULES"
+style="bold blue"
+[gcloud]
+disabled = true
+[kubernetes]
+disabled = true
+[nodejs]
+disabled = true
+[package]
+disabled = true
+
