@@ -1,5 +1,31 @@
 # Notes for installation:
 
+## Void Linux — Audio (PipeWire + Sway)
+
+Install PipeWire and session manager:
+
+```
+sudo xbps-install pipewire wireplumber
+```
+
+For Firefox video/portal support:
+
+```
+sudo xbps-install xdg-desktop-portal xdg-desktop-portal-wlr
+```
+
+In `~/.config/sway/config`, only add **one** exec line — pipewire auto-spawns wireplumber and pipewire-pulse itself:
+
+```
+exec pipewire
+exec /usr/libexec/xdg-desktop-portal-wlr
+exec sleep 1 && /usr/libexec/xdg-desktop-portal
+```
+
+**Do NOT add** `exec wireplumber` or `exec pipewire -c pipewire-pulse.conf` — Void's pipewire package handles those via `/etc/pipewire/pipewire.conf.d/`. Running them manually causes duplicates that crash each other and kill audio.
+
+---
+
 Nordvpn:
 
 ```
