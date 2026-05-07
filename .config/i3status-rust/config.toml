@@ -1,0 +1,43 @@
+[theme]
+theme = "plain"
+
+[icons]
+icons = "none"
+
+[[block]]
+block = "cpu"
+format = " CPU: $utilization.eng(w:4) "
+interval = 2
+
+[[block]]
+block = "memory"
+format = " RAM: $mem_used.eng(w:5)/$mem_total.eng(w:5) "
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+format = " Disk: $available.eng(w:5) "
+interval = 20
+
+[[block]]
+block = "battery"
+device = "DisplayDevice"
+driver = "upower"
+format = " Bat: $percentage.eng(w:4) "
+interval = 30
+
+[[block]]
+block = "sound"
+format = " Vol: $volume.eng(w:4) "
+
+[[block]]
+block = "net"
+device = "wlp3s0"
+format = " Net: $speed_down.eng(w:6,prefix:M)↓ $speed_up.eng(w:6,prefix:M)↑ "
+interval = 2
+
+[[block]]
+block = "time"
+format = " $timestamp.datetime(f:'%a %d %b  %H:%M') "
+interval = 60
