@@ -5,13 +5,26 @@ theme = "plain"
 icons = "none"
 
 [[block]]
-block = "cpu"
-format = " CPU: $utilization.eng(w:4) "
+block = "custom"
+command = "ip addr show tailscale0 2>/dev/null | grep -oP '100\\.\\d+\\.\\d+\\.\\d+' | head -1"
+format = " TS: $text.str() "
+interval = 10
+hide_when_empty = true
+
+[[block]]
+block = "net"
+device = "wlp3s0"
+format = " Net: $ssid $ip $speed_down.eng(w:3,prefix:M)↓ $speed_up.eng(w:3,prefix:M)↑ "
 interval = 2
 
 [[block]]
+block = "cpu"
+format = " CPU: $utilization.eng(w:4) "
+interval = 5
+
+[[block]]
 block = "memory"
-format = " RAM: $mem_used.eng(w:5)/$mem_total.eng(w:5) "
+format = " RAM: $mem_used.eng(w:3)/$mem_total.eng(w:3) "
 
 [[block]]
 block = "disk_space"
@@ -21,21 +34,15 @@ format = " Disk: $available.eng(w:5) "
 interval = 20
 
 [[block]]
+block = "sound"
+format = " Vol: $volume.eng(w:4) "
+
+[[block]]
 block = "battery"
 device = "DisplayDevice"
 driver = "upower"
 format = " Bat: $percentage.eng(w:4) "
 interval = 30
-
-[[block]]
-block = "sound"
-format = " Vol: $volume.eng(w:4) "
-
-[[block]]
-block = "net"
-device = "wlp3s0"
-format = " Net: $speed_down.eng(w:6,prefix:M)↓ $speed_up.eng(w:6,prefix:M)↑ "
-interval = 2
 
 [[block]]
 block = "time"
