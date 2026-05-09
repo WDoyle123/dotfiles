@@ -39,9 +39,20 @@ format = " Vol: $volume.eng(w:4) "
 
 [[block]]
 block = "battery"
-device = "DisplayDevice"
-driver = "upower"
-format = " Bat: $percentage.eng(w:4) "
+device = "BAT0"
+driver = "sysfs"
+format = " Bat0: $percentage "
+full_format = " Bat0: $percentage "
+not_charging_format = " Bat0: $percentage "
+interval = 30
+
+[[block]]
+block = "battery"
+device = "BAT1"
+driver = "sysfs"
+format = " Bat1: $percentage "
+full_format = " Bat1: $percentage "
+not_charging_format = " Bat1: $percentage "
 interval = 30
 
 [[block]]
